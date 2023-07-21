@@ -7,7 +7,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background-color: #fefefe;
-  padding: 1rem; /* 1rem == 16 pixels  */
+main {
+  flex: 1;
+}
+
+/* products.js 파일 설정 */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  border: 1px #404040 solid;
+  margin: 1rem;
+}
+
+.product img {
+  width: 100%;
+  max-width: 250px;
+}
+
+.product-info {
+  padding: 1rem;
 }
