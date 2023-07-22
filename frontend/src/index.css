@@ -11,6 +11,11 @@ main {
   flex: 1;
 }
 
+.btn-primary {
+  background-color: #f0c040;
+  color: #000000;
+}
+
 /* products.js 파일 설정 */
 .products {
   display: flex;
@@ -21,6 +26,11 @@ main {
 .product {
   border: 1px #404040 solid;
   margin: 1rem;
+}
+
+/* rating star 색 바꾸기 */
+.rating span {
+  color: #ffc000 
 }
 
 .product img {

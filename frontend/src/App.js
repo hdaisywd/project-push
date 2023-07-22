@@ -1,21 +1,18 @@
 import React from 'react';
-// import { Routes, Route, Link } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
-import Button from 'react-bootstrap/Button';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import Home from './pages/Home';
 import About from './pages/About';
 import Counter from './pages/Counter';
-import Products from './pages/Products';
+import Foryou from './pages/Foryou';
 import './logo.svg';
-// import { LinkContainer } from 'react-router-bootstrap';
 
 function App() {
   return (
@@ -52,8 +49,12 @@ function App() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/products">Products</Nav.Link>
-                  <NavDropdown
+                  <Nav.Link href="/products/foryou">FOR YOU</Nav.Link>
+                  <Nav.Link href="/products/best">BEST</Nav.Link>
+                  <Nav.Link href="/products/cart">CART</Nav.Link>
+                  <Nav.Link href="/products/mypage">MY PAGE</Nav.Link>
+                  {/* Dropdown 쓰고 싶으면 밑에 꺼 주석 없애기 */}
+                  {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -65,7 +66,7 @@ function App() {
                     <NavDropdown.Item href="#action5">
                       Something else here
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </Nav>
                 <Form className="d-flex">
                   <Form.Control
@@ -74,7 +75,6 @@ function App() {
                     className="me-2"
                     aria-label="Search"
                   />
-                  <Button variant="outline-success">Search</Button>
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
@@ -87,7 +87,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/counter" element={<Counter />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/products/foryou" element={<Foryou />} />
         </Routes>
       </div>
       <footer>
